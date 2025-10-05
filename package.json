@@ -1,0 +1,22 @@
+{
+  "name": "uzaiz-playwright-631",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DSI-QA-AUTOMATION/UZAIZ-PLAYWRIGHT-631.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DSI-QA-AUTOMATION/UZAIZ-PLAYWRIGHT-631/issues"
+  },
+  "homepage": "https://github.com/DSI-QA-AUTOMATION/UZAIZ-PLAYWRIGHT-631#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.6.2"
+  }
+}
