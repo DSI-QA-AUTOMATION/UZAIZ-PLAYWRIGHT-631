@@ -1,0 +1,31 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://demoqa.com/');
+  await page.getByRole('heading', { name: 'Alerts, Frame & Windows' }).click();
+  await page.getByText('Elements').click();
+  await page.getByText('Forms').click();
+  await page.locator('.col-12.mt-4.col-md-6 > div:nth-child(2)').click();
+  await page.locator('.col-12.mt-4.col-md-6 > div:nth-child(2)').click();
+  await page.locator('span').filter({ hasText: 'Forms' }).locator('div').first().click();
+  await page.locator('span').filter({ hasText: 'Forms' }).locator('div').first().click();
+  await page.getByRole('listitem').click();
+  await page.getByRole('textbox', { name: 'First Name' }).click();
+  await page.getByRole('textbox', { name: 'Last Name' }).click();
+  await page.getByRole('textbox', { name: 'name@example.com' }).click();
+  await page.getByText('Male', { exact: true }).click();
+  await page.getByRole('textbox', { name: 'Mobile Number' }).click();
+  await page.locator('#dateOfBirthInput').click();
+  await page.getByRole('option', { name: 'Choose Sunday, October 5th,' }).click();
+  await page.locator('.subjects-auto-complete__value-container').click();
+  await page.locator('div').filter({ hasText: /^Sports$/ }).click();
+  await page.locator('div').filter({ hasText: /^Music$/ }).click();
+  await page.getByRole('button', { name: 'Select picture' }).click();
+  await page.getByRole('button', { name: 'Select picture' }).setInputFiles('504175052_10230029058656079_3330110935105618393_n.jpg');
+  await page.getByRole('textbox', { name: 'Current Address' }).click();
+  await page.getByText('Select State').click();
+  await page.getByText('Uttar Pradesh', { exact: true }).click();
+  await page.locator('#city svg').click();
+  await page.getByText('Lucknow', { exact: true }).click();
+  await page.getByRole('button', { name: 'Submit' }).click();
+});
