@@ -1,0 +1,33 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://demoqa.com/automation-practice-form');
+  await page.getByRole('textbox', { name: 'First Name' }).click();
+  await page.getByRole('textbox', { name: 'First Name' }).fill('ashik');
+  await page.getByRole('textbox', { name: 'First Name' }).press('Tab');
+  await page.getByRole('textbox', { name: 'Last Name' }).fill('afran');
+  await page.getByRole('textbox', { name: 'Last Name' }).press('Tab');
+  await page.getByRole('textbox', { name: 'name@example.com' }).fill('asf@gmail.com');
+  await page.getByRole('textbox', { name: 'name@example.com' }).press('Tab');
+  await page.getByText('Male', { exact: true }).click();
+  await page.getByRole('textbox', { name: 'Mobile Number' }).click();
+  await page.getByRole('textbox', { name: 'Mobile Number' }).fill('0199991234');
+  await page.locator('#dateOfBirthInput').click();
+  await page.getByRole('option', { name: 'Choose Sunday, October 5th,' }).click();
+  await page.locator('.subjects-auto-complete__value-container').click();
+  await page.locator('#subjectsInput').fill('math');
+  await page.locator('#fixedban div').nth(1).click();
+  await page.locator('.subjects-auto-complete__value-container').click();
+  await page.locator('#subjectsInput').fill('math');
+  await page.getByText('Maths', { exact: true }).click();
+  await page.getByText('Sports').click();
+  await page.getByRole('button', { name: 'Select picture' }).click();
+  await page.getByRole('button', { name: 'Select picture' }).setInputFiles('504175052_10230029058656079_3330110935105618393_n.jpg');
+  await page.getByRole('textbox', { name: 'Current Address' }).click();
+  await page.getByRole('textbox', { name: 'Current Address' }).fill('dhaka');
+  await page.locator('#state > .css-yk16xz-control > .css-1wy0on6 > .css-tlfecz-indicatorContainer').click();
+  await page.getByText('Uttar Pradesh', { exact: true }).click();
+  await page.locator('#city > .css-yk16xz-control > .css-1wy0on6 > .css-tlfecz-indicatorContainer').click();
+  await page.getByText('Lucknow', { exact: true }).click();
+  await page.getByRole('button', { name: 'Submit' }).click();
+});
